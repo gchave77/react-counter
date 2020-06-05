@@ -1,16 +1,13 @@
-import React, {useState} from 'react';
+import React from "react";
 
 function Display(props) {
-    // const [display,setDisplay] = useState(0);
+  //   const [display, setDisplay] = useState(0);
 
-    return (
-        <section className="display">
-            This is the Display for the Counter.
-        </section>
-    )
-
-
+  return (
+    <div>
+      <section className="display">This is my Display for the Counter.</section>
+    </div>
+  );
 }
 
 export default Display;
-
