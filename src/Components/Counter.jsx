@@ -18,8 +18,8 @@ function Counter() {
       <br></br>
       <Display />
       <h1>{count}</h1>
-      <button onClick={increment}> + </button>
       <button onClick={decrement}> - </button>
+      <button onClick={increment}> + </button>
       <br></br>
       <br></br>
       <button className="btn" onClick={reset}>
