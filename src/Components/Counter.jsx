@@ -1,15 +1,34 @@
-import React from 'react';
-import Display from './Display';
-import ButtonPad from './ButtonPad';
-
+import React, { useState } from "react";
+import Display from "./Display";
+// import ButtonPad from "./ButtonPad";
 
 function Counter() {
-    return (
-        <div className="counter">
-            <Display/>
-            <ButtonPad/>
-        </div>
-    )
+  const [count, setCount] = useState(0);
+  function increment() {
+    setCount(count + 1);
+  }
+  function decrement() {
+    setCount(count - 1);
+  }
+  function reset() {
+    setCount(0);
+  }
+  return (
+    <div className="counter">
+      <br></br>
+      <Display />
+      <h1>{count}</h1>
+      <button onClick={decrement}> - </button>
+      <button onClick={increment}> + </button>
+      <br></br>
+      <br></br>
+      <button className="btn" onClick={reset}>
+        {" "}
+        reset{" "}
+      </button>
+      {/* <ButtonPad /> */}
+    </div>
+  );
 }
 
 export default Counter;
